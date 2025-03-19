@@ -121,13 +121,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.querySelector('.sidebar')
     const mobileMorebar = document.querySelector('.mobileMorebar');
     sidebar.style.visibility = 'visible'
-    mobileMorebar.style.visibility = 'visible';
   }
   function hideSidebar() {
     const sidebar = document.querySelector('.sidebar')
     const mobileMorebar = document.querySelector('.mobileMorebar');
     sidebar.style.visibility = 'hidden'
-    mobileMorebar.style.visibility = 'hidden';
   }
 
   // -- HIDING SIDEBAR UPON RESIZING CLIENT -- //
@@ -136,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var mobileMorebar = document.querySelector('.mobileMorebar');
     if (y.matches) {
       sidebar.style.visibility = "hidden";
-      mobileMorebar.style.visibility = "hidden";
     } else {
       // Nothing needs to execute here //
     }

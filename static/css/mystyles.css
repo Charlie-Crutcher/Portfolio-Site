@@ -2,14 +2,12 @@
     html {
         scroll-behavior: smooth;
     }
-
     * {
         margin: 0;
         padding: 0;
         font-family: "Anton", sans-serif;
     }
 /* ----- HTML SETTINGS ----- */
-
 
 
 /* ----- BODY ----- */
@@ -25,7 +23,6 @@
 /* ----- BODY ----- */
 
 
-
 /* ----- HEADINGS & HR ----- */
     h1 {
         text-align:  center;
@@ -34,18 +31,15 @@
         letter-spacing: 5px;
         text-shadow: -2px -2px 0 #2D2424, 2px -2px 0 #2D2424, -2px 2px 0 #2D2424, 5px 2px 0 #2D2424;
     }
-
     h2 {
         font-size: 56px;
         color: #2D2424;
         letter-spacing: 5px;
     }
-
     #inverth2 {
         margin-top: 10vh; 
         color: #E0C097;
     }
-
     hr {
         margin: 5px;
         height: 5px;
@@ -56,24 +50,23 @@
 /* ----- HEADINGS & HR ----- */
 
 
-
 /* ----- ANCHORS ----- */
     a {
         text-decoration: none;
         color: #3C3D37;
     }
-
     #closeMe {
         font-size: 32px;
         color:white;
         transition: color 0.2s linear;
     }
-
     #closeMe:hover {
         color:#000;
     }
+    .noHover{
+        pointer-events: none;
+    }
 /* ----- ANCHORS ----- */
-
 
 
 /* ----- NAVIGATION ----- */
@@ -107,9 +100,8 @@
         margin-right: auto;
     }
     a.active {
-        color: white;
+        color: rgb(211, 218, 223);
     }
-
     /* -- SIDEBAR -- */
     .sidebar {
         visibility: hidden;
@@ -132,7 +124,9 @@
     .sidebar a {
         width: 100%;
     }
-
+    a.lowerSideBar:hover{
+        background-color: white;
+    }
     /* -- MISC DROPDOWN (morebar) -- */
     .morebar {
         visibility: hidden;
@@ -154,36 +148,10 @@
     .morebar a {
         width: 100%;
     }
-
-    /* MOBILE MISC DROPDOWN (morebar) -- */
-    .mobileMorebar {
-        visibility: hidden;
-        position: fixed;
-        flex-direction: column;
-        align-items: flex-end;
-        justify-content: flex-end;
-        background-color: #22231d;
-        backdrop-filter: blur(1px);
-        bottom: 0;
-        right: 0;
-        width: 250px;
-        height: 25vh;
-        z-index: 100;
-    }
-    .mobileMorebar li {
-        width: 100%;
-    }
-    .mobileMorebar a {
-        width: 100%;
-        color: #5598a9;
-    }
-    .mobileMorebar a:hover {
-        background-color:#5699aa4f ;
-    }
-
 /* ----- NAVIGATION ----- */
 
-/* ===== Task List ===== */
+
+/* ----- TASK LIST ----- */
     /* The list that containers the user's tasks */
     #taskListUL {
         text-align: center;
@@ -221,7 +189,6 @@
         background: #595959;
         text-decoration: line-through;
     }
-    
     /* Input box for adding tasks */
     input {
         text-align: center;
@@ -266,6 +233,9 @@
         background-color: black;
         color: white;
     }
+/* ----- TASK LIST ----- */
+
+
 /* ----- PANELS ----- */
     .panel {
         justify-items: center;
@@ -281,26 +251,29 @@
         box-sizing: border-box;
         background-color: #ECEFF1; }
     .panel#home {
-    z-index: 1;
-    background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,#CFD8DC 100%); }
-
-/* ----- PANELS : TASK LIST ----- */ 
+        z-index: 1;
+        background: radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,#CFD8DC 100%); 
+    }
+    /* -- PANELS : TASK LIST -- */ 
     .panel#tasklist {
-    background-color: #263238;
-    transition: all 800ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
-    transform: translate3d( 0, -100%, 0 ); }
-    
+        background-color: #263238;
+        transition: all 800ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
+        transform: translate3d( 0, -100%, 0 ); 
+    }
     .panel#tasklist:target {
-    transform: translate3d( 0, 0, 0 ); }
-
-/* ----- PANELS : CALCULATOR ----- */
+        transform: translate3d( 0, 0, 0 ); 
+    }
+    /* -- PANELS : CALCULATOR -- */
     .panel#calculator {
         background-color: #263238;
         transition: all 800ms cubic-bezier(0.190, 1.000, 0.560, 1.000);
-        transform: translate3d( 0, -100%, 0 ); }
-        
+        transform: translate3d( 0, -100%, 0 ); 
+    }
     .panel#calculator:target {
-        transform: translate3d( 0, 0, 0 ); }
+        transform: translate3d( 0, 0, 0 ); 
+    }
+/* ----- PANELS ----- */
+
 
 /* ----- RESPONSIVE DESIGN ----- */
 .menuButton {
@@ -322,3 +295,4 @@
         display: none;
     }
 }
+/* ----- RESPONSIVE DESIGN ----- */

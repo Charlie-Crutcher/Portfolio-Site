@@ -87,16 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   })
 
-// ----- ACTIVE CLASS : MOBILE MOREBAR ----- //
-  document.querySelectorAll('.mobileMorebar a').forEach(link => {
-    link.addEventListener('click', function() {
-        // Remove active class from all links
-        document.querySelectorAll('.mobileMorebar a').forEach(el => el.classList.remove('active'));
-        
-        // Add active class to clicked link
-        this.classList.add('active');
-    });
-});
 // ----- MISC DESKTOP DROPDOWN (MOREBAR) ----- // 
 
   // -- DROPDOWN MENU TOGGLE FOR DESKTOP MOREBAR (MISC) -- //

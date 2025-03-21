@@ -1,3 +1,36 @@
+// ----- MODAL FOR IMAGES ----- //
+
+// Gets the model container (myModal)
+var modal = document.getElementById("myModal");
+
+// Modal elements.
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var closeModal = document.getElementsByClassName("close")[0];
+
+// Loop through all images and add click event listeners
+document.querySelectorAll(".photoItem img").forEach(img => {
+  img.addEventListener("click", function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+  });
+});
+
+// Close modal when 'X' is clicked
+closeModal.onclick = function () {
+  modal.style.display = "none";
+};
+
+// Close modal when clicking outside the image
+modal.onclick = function (event) {
+  if (event.target === modal) {
+      modal.style.display = "none";
+  }
+};
+
+
+
 // ----- CLOSE BUTTON : DEFINING : TASK LIST ----- //
 function addCloseButton(li) {
   var span = document.createElement("SPAN");

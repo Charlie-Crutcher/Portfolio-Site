@@ -73,6 +73,30 @@
     </nav>
     <div class="myBody">
         <h1>Photography</h1>
+<<<<<<< Updated upstream
+=======
+        <hr>
+        <h2>Discord.py Image Reposter Bot</h2>
+        <p>Photography is a hobby & passion for me and a few close friends, with us often posting our images onto our Discord channel.
+            This got me thinking about uploading these photographs onto this website. I wanted however, to execute this slightly more
+            creatively; instead of simply manually uploading each picture, I made use of Discord.py, flask and MySQL to make a bot that takes
+            images from the discord and uploads them automatically! 
+        </p>
+        <div class="photoAlbum">
+            {% for image in images %}
+                <div class="photoItem">
+                    <a style="cursor: pointer;"><img id="myImg" src="{{ image }}" alt="Photography"></a>
+                </div>
+            {% endfor %}
+        </div>
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption">
+
+            </div>
+        </div>
+>>>>>>> Stashed changes
     </div>
     <script src="../static/js/myscripts.js">Hello</script>
 </body>
